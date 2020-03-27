@@ -1,0 +1,44 @@
+1. Difference between let and var:
+    i.   The 'let' keyword is the latest one where 'var' is the old keyword to declare a variable in javascript. 
+    ii.  These two has a significant difference interms block scope.
+    iii. The scope of the variable declared using 'let' keyword ends within the block where it is declared.
+        See below implementation for example:         
+            let i = 1;
+            if( i == 1) {
+                let number = 10;
+            }
+            console.log(number);
+
+        The scope of variable 'number' ends within if block. Hence, trying to print it in console outside if block 
+        will through error. Whereas the scope of variable declared using 'var' keyword does not end within the scope.
+
+        See below implementation for example:
+            let i = 1;
+            if( i == 1) {
+                let name = 'Dhinesh';
+            }
+            console.log(name);
+        The scope of variable 'name' does not end within if block but, extends outside if as well. Hence, trying to 
+        print name outside if block won't through an error and, will successfully prints the name.
+
+    iv. The same scope logic applies to other block of codes such as function, for, for each loop as well.
+
+    v. The accessibility of variables declared using 'var' keyword makes it ambiguous. Hence, 'let' is advised to
+        use in programs.
+
+2. What is Rest parameters?
+    1. This is simplest way to accept array of variables in a function.
+        For example:
+            function printNumbers(...numbers) {
+                number.forEach(number => console.log(number));
+            }
+            printNumbers(1,2,3,4);
+    2. The same concept in java called 'varargs'.
+    3. See example for sending other other parameter with rest parameter.
+            function printNumbers(count, ...numbers) {
+                number.forEach(number => console.log(number));
+            }
+            printNumbers('four', 1,2,3,4);
+
+
+        
